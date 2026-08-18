@@ -174,19 +174,19 @@
     font-family:'Cormorant Garamond', serif;
     font-size:15px;
     line-height:1.55;
-    color: rgba(13,11,8,0.65);
+    color: var(--ink);
     margin:0;
   }
 
   /* ---------- FORM CARD ---------- */
   .card{
     margin-top:22px;
-    background: #fffdf8;
+    background: var(--ink-2);
     border-radius: 2px;
     padding: 26px 22px 28px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    color: var(--ink);
-    border: 1px solid #e8dcc0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    color: var(--cream);
+    border: 1px solid var(--line);
   }
   .card h3{
     text-align:center;
@@ -195,7 +195,7 @@
     letter-spacing:.2em;
     font-size:14px;
     text-transform:uppercase;
-    color: var(--gold-deep);
+    color: var(--gold-bright);
     margin: 0 0 20px;
   }
   .field{
@@ -213,7 +213,7 @@
     border-color: var(--gold);
     box-shadow: 0 0 0 3px rgba(201,162,75,0.15);
   }
-  .field svg{ flex:none; width:19px; height:19px; color: var(--gold-deep); opacity:.8; }
+  .field svg{ flex:none; width:19px; height:19px; color: var(--ink); opacity:.75; }
   .field input{
     border:none; outline:none; flex:1;
     font-family:'EB Garamond', serif;
