@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fiesta de Promoción 2026 — Registro</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Playfair+Display:wght@600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Playfair+Display:wght@600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@300;400&family=Bodoni+Moda:wght@400;600&family=Cinzel:wght@500;600&family=Alex+Brush&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#0d0b08;
@@ -38,11 +38,13 @@
     position:relative;
     border-radius: 22px;
     overflow:hidden;
-    background:
-      radial-gradient(120% 90% at 50% -10%, rgba(201,162,75,0.18), transparent 60%),
-      linear-gradient(180deg, #14100b 0%, #0b0906 70%, #0b0906 100%);
+    background-image:
+      linear-gradient(180deg, rgba(10,8,5,0.55) 0%, rgba(8,6,4,0.75) 55%, rgba(6,5,3,0.92) 100%),
+      url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
     border: 1px solid var(--line);
-    padding: 38px 20px 34px;
+    padding: 40px 20px 36px;
     text-align:center;
     box-shadow: var(--shadow);
   }
@@ -61,57 +63,77 @@
   @keyframes twinkle{ from{opacity:.5;} to{opacity:1;} }
 
   .cap{
-    width:46px; height:46px; margin: 0 auto 14px;
+    width:40px; height:40px; margin: 0 auto 14px;
     color: var(--gold-bright);
     filter: drop-shadow(0 0 10px rgba(242,211,138,0.35));
+    display: block;
+    position: relative;
   }
-  .eyebrow{
-    position:relative;
-    font-family:'EB Garamond', serif;
-    letter-spacing:.32em;
-    font-size:12px;
+  .promo-label{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 19px;
+    letter-spacing: 4.5px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0 0 6px;
+    position: relative;
+  }
+  .promo-year{
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 400;
+    font-size: 56px;
     color: var(--gold-bright);
-    text-transform:uppercase;
-    display:flex; align-items:center; justify-content:center; gap:12px;
-    margin-bottom:6px;
+    margin: 0 0 10px;
+    line-height: 1;
+    position: relative;
   }
-  .eyebrow::before, .eyebrow::after{
-    content:""; width:26px; height:1px; background: var(--gold);
-  }
-  .year{
-    font-family:'Playfair Display', serif;
-    font-weight:800;
-    font-size:clamp(32px, 10vw, 40px);
-    letter-spacing:.06em;
-    background: linear-gradient(180deg, var(--gold-bright), var(--gold-deep));
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-    margin: 2px 0 16px;
-  }
-  .title{
-    font-family:'Playfair Display', serif;
-    font-weight:700;
-    font-size:clamp(30px, 9vw, 38px);
-    line-height:1.05;
-    color:var(--cream);
-    margin:0;
-  }
-  .title em{
-    display:block;
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    font-weight:500;
-    font-size:clamp(26px, 8vw, 34px);
+  .promo-name{
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 5px;
     color: var(--gold-bright);
-    margin-top:2px;
+    text-transform: uppercase;
+    margin: 0 0 22px;
+    position: relative;
   }
-  .star{ color:var(--gold); margin:16px 0 10px; font-size:14px; letter-spacing:.4em; }
-  .subtitle{
+  .promo-title-wrap{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .promo-fiesta{
+    display: block;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 400;
+    font-size: 43px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    text-transform: uppercase;
+    line-height: 1.05;
+  }
+  .promo-script{
+    display: block;
+    font-family: 'Alex Brush', cursive;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 54px;
+    color: #f5dda3;
+    margin-top: -10px;
+    line-height: 1;
+  }
+
+  .promo-subtitle{
     font-family:'Cormorant Garamond', serif;
     font-size:16.5px;
-    color: rgba(246,239,224,0.8);
+    color: rgba(246,239,224,0.85);
     line-height:1.6;
     max-width:300px;
-    margin: 6px auto 0;
+    margin: 18px auto 0;
+    position: relative;
   }
 
   /* ---------- INTRO ---------- */
@@ -365,7 +387,9 @@
   @media (max-width: 400px){
     body{ padding: 20px 10px 44px; }
     .hero{ padding: 32px 16px 28px; border-radius:18px; }
-    .subtitle{ font-size:15px; max-width:260px; }
+    .promo-year{ font-size: 46px; }
+    .promo-fiesta{ font-size: 36px; }
+    .promo-script{ font-size: 44px; margin-top: -10px; }
     .intro{ padding: 22px 2px 4px; gap:12px; }
     .intro h2{ font-size:18px; }
     .intro p{ font-size:14px; }
@@ -376,10 +400,11 @@
     .admin{ padding: 14px; }
   }
   @media (max-width: 340px){
-    .year{ font-size: 30px; }
-    .title{ font-size: 27px; }
-    .title em{ font-size: 24px; }
-    .eyebrow{ letter-spacing:.22em; font-size:11px; }
+    .promo-label{ letter-spacing:3.5px; font-size:17px; }
+    .promo-year{ font-size: 40px; }
+    .promo-name{ font-size: 13px; letter-spacing: 4px; }
+    .promo-fiesta{ font-size: 32px; }
+    .promo-script{ font-size: 38px; }
   }
 </style>
 </head>
@@ -391,11 +416,14 @@
       <path d="M12 3L2 8l10 5 8-4.1V15h1V8L12 3z" fill="currentColor"/>
       <path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5" stroke="currentColor" stroke-width="1.3" fill="none"/>
     </svg>
-    <div class="eyebrow">Promoción 11°</div>
-    <div class="year">2026</div>
-    <h1 class="title">Fiesta de<em>Promoción Hennessy</em></h1>
-    <div class="star">★</div>
-    <p class="subtitle">Una noche para celebrar todo lo que hemos construido juntos.</p>
+    <p class="promo-label">PROMOCIÓN 11°</p>
+    <p class="promo-year">2026</p>
+    <p class="promo-name">HENNESSY</p>
+    <div class="promo-title-wrap">
+      <span class="promo-fiesta">FIESTA DE</span>
+      <span class="promo-script">Promoción</span>
+    </div>
+    <p class="promo-subtitle">Una noche para celebrar todo lo que hemos construido juntos.</p>
   </div>
 
   <div class="intro">
@@ -656,7 +684,7 @@ adminPassInput.addEventListener('keydown', (e) => {
 
 document.getElementById('exportBtn').addEventListener('click', () => {
   if (allRecords.length === 0) { alert('No hay registros para exportar.'); return; }
-  const header = 'Nombre del padre/madre,Nombre del estudiante,WhatsApp,Personas,Fecha\n';
+  const header = 'Nombre del padre/madre,Nombre del estudiante,WhatsApp,Personas,Fecha de registro\n';
   const rows = allRecords.map(r =>
     [r.padre, r.estudiante, r.whatsapp, r.personas, r.created_at]
       .map(v => `"${String(v).replace(/"/g,'""')}"`).join(',')
